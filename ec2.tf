@@ -12,6 +12,7 @@ provider "aws" {
 }
 
 resource "aws_instance" "ec2" {
+  hostname      = var.vm-name
   ami           = "dnd-0abcdef1234567890"
   instance_type = "t2.micro"
 
