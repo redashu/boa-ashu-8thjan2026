@@ -1,4 +1,5 @@
 terraform {
+  required_version = "~> 1.13.0"
   required_providers {
     aws = {
       source  = "hashicorp/aws"
@@ -7,12 +8,12 @@ terraform {
   }
   # terraform tfstate file remote backend section 
   backend "s3" {
-    bucket = "ashutoshh-jan26-terraform"
-    key = "dev/ashutoshh/terraform.tfstate"
-    encrypt = true
-    region = "us-west-1"
+    bucket         = "ashutoshh-jan26-terraform"
+    key            = "dev/hoffmank/terraform.tfstate"
+    encrypt        = true
+    region         = "us-west-1"
     dynamodb_table = "ashutoshh-locking-table1"
-    
+
   }
 }
 
