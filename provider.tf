@@ -1,11 +1,11 @@
 terraform {
   required_version = "~> 1.13.0"
-  required_providers {
-    aws = {
-      source  = "hashicorp/aws"
-      version = "6.27.0"
-    }
-  }
+  #  required_providers {
+  #    aws = {
+  #      source  = "hashicorp/aws"
+  #      version = "6.27.0"
+  #    }
+  #  }
   # terraform tfstate file remote backend section 
   backend "s3" {
     bucket         = "ashutoshh-jan26-terraform"
@@ -17,7 +17,7 @@ terraform {
   }
 }
 
-provider "aws" {
-  # Configuration options
-  region = "us-east-1" # additional changes
-}
+#provider "aws" {
+#  # Configuration options
+# region = "us-east-1" # additional changes
+#}
